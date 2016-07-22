@@ -3,7 +3,7 @@
   $dir    = '/Applications/MAMP/htdocs/dev/';
   # Array static sites
   $importantsites= array(
-    'phpmyadmin' => 'http://localhost/phpmyadmin',
+    'PhpMyAdmin' => 'http://localhost/phpmyadmin',
     'GitHub' => 'https://github.com/carcheky',
      );
   $htdocssites = array_diff(scandir($dir), array('..', '.', '.DS_Store', 'home'));
@@ -38,7 +38,7 @@
   <ul class="list">
     <?php
       foreach ($importantsites as $key => $value) {
-        echo "<li><a  class='site' target='_blank' href=".$value.">".$key."</a></li>";
+        echo "<li><a  class='site favorite' target='_blank' href=".$value.">".$key."</a></li>";
       }
       foreach ($htdocssites as $key => $value) {
         echo "<li><a  class='site' target='_blank' href=http://".$value.".dev>".$value."</a></li>";
