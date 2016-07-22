@@ -28,7 +28,7 @@
 </head>
 <body>
 
-
+<h1>HomeLamp</h1>
 
 
 <div id="sites">
