@@ -5,6 +5,10 @@
   $importantsites= array(
     'PhpMyAdmin' => 'http://localhost/phpmyadmin',
     'GitHub' => 'https://github.com/carcheky',
+    'ABServer' => 'https://maguire3.hospedando.com:8443/login_up.php3',
+    'Álef'  =>  'http://alef.jfmaguire.es',
+    'OTs' =>  'http://www.ots.jfmaguire.es',
+    'Mailcatcher' =>  'http://127.0.0.1:1080/'
      );
   $htdocssites = array_diff(scandir($dir), array('..', '.', '.DS_Store', 'home'));
 ?>
@@ -41,7 +45,9 @@
         echo "<li><a  class='site favorite' target='_blank' href=".$value.">".$key."</a></li>";
       }
       foreach ($htdocssites as $key => $value) {
-        echo "<li><a  class='site' target='_blank' href=http://".$value.".dev>".$value."</a></li>";
+        if (is_dir($dir . '/' . $value)) {
+          echo "<li><a  class='site' target='_blank' href=http://".$value.".dev>".$value."</a></li>";
+        }
       }
     ?>
   </ul>
