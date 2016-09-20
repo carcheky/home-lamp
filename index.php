@@ -5,9 +5,6 @@
   $importantsites= array(
     'PhpMyAdmin' => 'http://localhost/phpmyadmin',
     'GitHub' => 'https://github.com/carcheky',
-    'ABServer' => 'https://maguire3.hospedando.com:8443/login_up.php3',
-    'Álef'  =>  'http://alef.jfmaguire.es',
-    'OTs' =>  'http://www.ots.jfmaguire.es',
     'Mailcatcher' =>  'http://127.0.0.1:1080/'
      );
   $htdocssites = array_diff(scandir($dir), array('..', '.', '.DS_Store', 'home'));
