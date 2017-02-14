@@ -1,6 +1,6 @@
 <?php
   # Default htdocs directory
-  $dir    = '/Applications/MAMP/htdocs/dev/';
+  $dir    = '/Applications/MAMP/htdocs';
   # Array static sites
   $importantsites= array(
     'PhpMyAdmin' => 'http://localhost/phpmyadmin',
