@@ -4,9 +4,21 @@ $dir = '/mnt/c/wsl/sites';
 $domain_sufix = '.local';
 # Array static sites
 $importantsites = array(
-  'GitHub'      => 'https://github.com/carcheky',
+  'GitHub carcheky'      => 'https://github.com/carcheky',
 );
-$htdocssites = array_diff(scandir($dir), array('..', '.', '.DS_Store', 'home', 'private_drupal', 'private_php', 'electronapp', '_backup'));
+$htdocssites = array_diff(
+  scandir($dir),
+  array(
+    '..',
+    '.',
+    '.DS_Store',
+    'home',
+    'private_drupal',
+    'private_php',
+    'electronapp',
+    '_backup'
+  )
+);
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +59,7 @@ $htdocssites = array_diff(scandir($dir), array('..', '.', '.DS_Store', 'home', '
       }
       foreach ($htdocssites as $key => $value) {
         if (is_dir($dir . '/' . $value)) {
-          echo "<li><a  class='site' target='_blank' href='http://" . $value . $domain_sufix. "'>" . $value . "</a></li>";
+          echo "<li><a  class='site' target='_blank' href='http://" . $value . $domain_sufix . "'>" . $value . "</a></li>";
         }
       }
       ?>
