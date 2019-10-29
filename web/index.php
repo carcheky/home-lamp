@@ -55,11 +55,11 @@ $htdocssites = array_diff(
     <ul class="list">
       <?php
       foreach ($importantsites as $key => $value) {
-        echo "<li><a  class='site favorite' target='_blank' href=" . $value . ">" . $key . "</a></li>";
+        echo "<li><a  class='site favorite' href=" . $value . ">" . $key . "</a></li>";
       }
       foreach ($htdocssites as $key => $value) {
         if (is_dir($dir . '/' . $value)) {
-          echo "<li><a  class='site' target='_blank' href='http://" . $value . $domain_sufix . "'>" . $value . "</a></li>";
+          echo "<li><a  class='site' href='http://" . $value . $domain_sufix . "'>" . $value . "</a></li>";
         }
       }
       ?>
