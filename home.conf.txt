@@ -1,0 +1,15 @@
+
+<VirtualHost *:80 *:8888>
+    ServerName home.local
+    ServerAdmin webmaster@home.local
+    DocumentRoot /mnt/c/wsl/server/home/web
+    RewriteEngine On
+    RewriteOptions inherit
+    CustomLog /mnt/c/wsl/server/log/home/home.log combined
+    <Directory /mnt/c/wsl/server/home/web>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
